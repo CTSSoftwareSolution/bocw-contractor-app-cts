@@ -26,8 +26,6 @@ class _ForgotPasswordItemState extends State<ForgotPasswordItem> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-
-        /// EMAIL
         const CustomText(
           text: "Email",
           fontWeight: FontWeight.w600,

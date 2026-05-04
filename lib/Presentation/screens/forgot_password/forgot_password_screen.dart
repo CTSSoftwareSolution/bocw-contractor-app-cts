@@ -33,8 +33,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-
-      /// BODY
       body: SafeArea(
         child: Column(
           children: [
@@ -45,14 +43,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   key: _formKey,
                   child: Column(
                     children: [
-                      /// LOGO
                       const SizedBox(height: 40),
-
                       const ImageAssets(image: workerLogo, height: 90),
-
                       const SizedBox(height: 20),
-
-                      /// TITLE
                       const CustomText(
                         text: "Forgot Password",
                         fontSize: 28,
@@ -60,21 +53,16 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         textAlign: TextAlign.center,
                         textColor: textPrimary,
                       ),
-
                       const SizedBox(height: 10),
-
                       const CustomText(
                         text: "Enter your registered email to reset password",
                         fontSize: 14,
                         textAlign: TextAlign.center,
                         textColor: textSecondary,
                       ),
-
                       const SizedBox(height: 30),
                       const ForgotPasswordItem(),
                       const SizedBox(height: 30),
-
-                      /// NEXT BUTTON
                       CustomButton(
                         width: double.infinity,
                         height: 48,

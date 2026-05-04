@@ -13,7 +13,6 @@ class WorkerSelectionScreen extends StatefulWidget {
 
 class _WorkerSelectionScreenState extends State<WorkerSelectionScreen> {
 
-  /// Dummy Worker List
   final List<Map<String, dynamic>> workers = [
     {"name": "Rahul", "selected": false},
     {"name": "Amit", "selected": false},
@@ -21,14 +20,12 @@ class _WorkerSelectionScreenState extends State<WorkerSelectionScreen> {
     {"name": "Suresh", "selected": false},
   ];
 
-  /// Toggle Selection
   void toggleSelection(int index) {
     setState(() {
       workers[index]["selected"] = !workers[index]["selected"];
     });
   }
 
-  /// Get Selected Workers
   List selectedWorkers() {
     return workers.where((w) => w["selected"] == true).toList();
   }
@@ -49,8 +46,6 @@ class _WorkerSelectionScreenState extends State<WorkerSelectionScreen> {
 
       body: Column(
         children: [
-
-          /// 🔹 Worker List
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(16),
@@ -69,8 +64,6 @@ class _WorkerSelectionScreenState extends State<WorkerSelectionScreen> {
                   ),
                   child: Row(
                     children: [
-
-                      /// Name
                       Expanded(
                         child: CustomText(
                           text: worker["name"],
@@ -79,8 +72,6 @@ class _WorkerSelectionScreenState extends State<WorkerSelectionScreen> {
                           textColor: textPrimary,
                         ),
                       ),
-
-                      /// Checkbox
                       Checkbox(
                         value: worker["selected"],
                         activeColor: primaryColor,
@@ -92,8 +83,6 @@ class _WorkerSelectionScreenState extends State<WorkerSelectionScreen> {
               },
             ),
           ),
-
-          /// 🔹 Done Button
           Container(
             padding: const EdgeInsets.all(16),
             child: SizedBox(

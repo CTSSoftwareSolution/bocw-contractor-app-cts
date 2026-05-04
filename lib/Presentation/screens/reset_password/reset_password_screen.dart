@@ -30,8 +30,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-
-      /// BODY
       body: SafeArea(
         child: Column(
           children: [

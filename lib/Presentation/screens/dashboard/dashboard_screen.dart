@@ -1,5 +1,6 @@
 import 'package:bocw_contractor_app/Presentation/screens/dashboard/dashboard_stat_card.dart';
 import 'package:bocw_contractor_app/Presentation/screens/dashboard/dashboard_tabs.dart';
+import 'package:bocw_contractor_app/Presentation/screens/project/add_project_screen.dart';
 import 'package:bocw_contractor_app/utilities/app_color.dart';
 import 'package:bocw_contractor_app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -45,10 +46,18 @@ class DashboardScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const Expanded(
-              child: DashboardTabs(),
-            ),
+            const Expanded(child: DashboardTabs()),
           ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: primaryColor,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const AddProjectScreen()),
+            );
+          },
+          child: const Icon(Icons.add, color: whiteColor),
         ),
       ),
     );

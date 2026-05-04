@@ -13,7 +13,6 @@ class DashboardStatCard extends StatelessWidget {
     required this.count,
   });
 
-  /// 🔥 Background Color
   Color getBgColor() {
     switch (title) {
       case "Workers":
@@ -27,7 +26,6 @@ class DashboardStatCard extends StatelessWidget {
     }
   }
 
-  /// 🔥 Text Color
   Color getTextColor() {
     switch (title) {
       case "Workers":
@@ -53,14 +51,11 @@ class DashboardStatCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: bg,
           borderRadius: BorderRadius.circular(8),
-
-          /// ✅ FIXED BORDER (visible for all cards)
           border: Border.all(
             color: textClr.withOpacity(0.25),
             width: 1,
           ),
 
-          /// 🔥 Optional subtle shadow (premium feel)
           boxShadow: [
             BoxShadow(
               color: blackColor.withOpacity(0.03),
