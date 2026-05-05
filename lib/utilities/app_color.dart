@@ -22,3 +22,4 @@ const buttonPrimary = primaryColor;
 const buttonDisabled = Color(0xffBDBDBD);
 
 const dashboardBg = Color(0xffECF8F1);
+const mediaPickerColor = Color(0xffebf3f0);
